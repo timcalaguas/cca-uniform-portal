@@ -17,7 +17,7 @@ export default function MyOrders() {
   const { data, isLoading } = useAppQuery({
     queryKey: ["orders"],
     url: `/api:teW9LUt8/order/user/${user.id}`,
-    isPrivate: true, // 🔒 uses token
+    isPrivate: true,
     enabled: !!user,
   });
 
