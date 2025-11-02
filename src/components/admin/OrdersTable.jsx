@@ -32,8 +32,6 @@ export default function OrdersTable({ title }) {
     method: "put",
   });
 
-  console.log("Orders Data:", data);
-
   const handleStatusChange = (orderId, newStatus) => {
     mutate(
       { id: orderId, status: newStatus },

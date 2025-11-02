@@ -1,17 +1,6 @@
 import { useState } from "react";
 
-import {
-  Home,
-  User,
-  ShoppingBag,
-  ShoppingCart,
-  LogOut,
-  XIcon,
-  Plus,
-  Minus,
-  Trash,
-  LogIn,
-} from "lucide-react";
+import { User, ShoppingBag, ShoppingCart, LogOut } from "lucide-react";
 
 import Logo from "../assets/logo.png";
 import { useCartStore } from "../store/cartStore";
@@ -34,7 +23,7 @@ export const Header = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-white to-teal-50 rounded-2xl shadow-md">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <a className="flex items-center gap-3" href="/">
+            <Link className="flex items-center gap-3" to="/">
               <img
                 src={Logo}
                 alt="Logo"
@@ -43,7 +32,7 @@ export const Header = () => {
               <h1 className="text-xl hidden sm:block font-bold text-gray-900">
                 CCA Uniform Portal
               </h1>
-            </a>
+            </Link>
 
             {/* Actions */}
             <div className="flex flex-row items-center gap-5">
@@ -88,12 +77,12 @@ export const Header = () => {
                   )}
                 </div>
               ) : (
-                <a
-                  href="/login"
+                <Link
+                  to="/login"
                   className="flex gap-2 items-center text-xs bg-teal-600 text-white px-4 py-2 rounded-lg shadow hover:bg-teal-700 transition"
                 >
                   Sign In
-                </a>
+                </Link>
               )}
             </div>
           </div>
